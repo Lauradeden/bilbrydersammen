@@ -40,3 +40,19 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
+.hotspot {
+  fill: #ffa680;
+  stroke: black;
+}
+#circle-hotspot1:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+#circle-hotspot2:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+#circle-hotspot3:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
