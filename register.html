@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,10 +37,63 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2 id="form-h2">🚨 Roadtrip Rescue Form</h2>
+          <p>Bilen har givet op - men det behøver du ikke at gøre! Udfyld formularen, så hjælpen (eller grinene) er på vej.</p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <section id="personal-info">
+            <div>
+              <label for="full-name">🧍🏼‍♂️Fulde navn</label>
+              <input type="text" id="full-name" required />
+              <p class="error-message">Please enter a value</p>
+            </div>
+            <div>
+              <label for="phonenumber">📱 Telefonnummer</label>
+              <input type="tel" id="phonenumber" required />
+              <p class="error-message">Please enter a value</p>
+            </div>
+          </section>
+
+          <div class="form-group">
+            <label for="location">📍 Hvor står bilen?</label>
+            <select name="location" id="location" required>
+              <option value="">Vælg en mulighed</option>
+              <option value="country">Landevej</option>
+              <option value="highway">Motorvej</option>
+              <option value="city">Byområde</option>
+              <option value="forest">Midt i ingenting</option>
+            </select>
+            <p class="error-message">Please enter a value</p>
+          </div>
+          <div class="form-group">
+            <p class="labet-text">⚠️ Hvad gik galt?</p>
+            <div class="radio-group">
+              <label for="flat-tire"><input type="radio" name="issue" value="flat-tire" required />Punktering</label>
+              <label for="engine"><input type="radio" name="issue" value="engine" />Motorproblemer</label>
+              <label for="battery"><input type="radio" name="issue" value="battery" />Dødt batteri</label>
+              <label for="lost"><input type="radio" name="issue" value="lost" />GPS vil ikke samarbejde</label>
+              <p class="error-message">Please enter a value</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="battery">📱 Hvor meget strøm har du tilbage?</label>
+            <input type="range" id="battery" name="battery" min="0" max="100" value="50" oninput="batteryValue.textContent= this.value+'%'" />
+            <output id="batteryValue">50%</output>
+            <p class="error-message">Please enter a value</p>
+          </div>
+          <div class="form-group">
+            <label for="details">🗒️ Beskriv situationen</label>
+            <textarea name="details" id="details" rows="3"></textarea>
+            <p class="error-message">Please enter a value</p>
+          </div>
+          <div class="form-group">
+            <label for="terms">
+              <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
+              Accepter vilkår
+            </label>
+          </div>
+          <button>🚗 Send nødrapport</button>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
@@ -76,6 +129,6 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/register.js"></script>
   </body>
 </html>
