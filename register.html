@@ -34,30 +34,27 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>ER DIN BIL GÅET I STÅ PÅ TUREN?</h1>
       <section id="form-section">
         <article id="form-info">
           <h2 id="form-h2">🚨 Roadtrip Rescue Form</h2>
           <p>Bilen har givet op - men det behøver du ikke at gøre! Udfyld formularen, så hjælpen (eller grinene) er på vej.</p>
         </article>
         <form id="webform">
-          <section id="personal-info">
-            <div>
-              <label for="full-name">🧍🏼‍♂️Fulde navn</label>
-              <input type="text" id="full-name" required />
-              <p class="error-message">Please enter a value</p>
-            </div>
-            <div>
-              <label for="phonenumber">📱 Telefonnummer</label>
-              <input type="tel" id="phonenumber" required />
-              <p class="error-message">Please enter a value</p>
-            </div>
-          </section>
-
           <div class="form-group">
-            <label for="location">📍 Hvor står bilen?</label>
-            <select name="location" id="location" required>
-              <option value="">Vælg en mulighed</option>
+            <label for="full-name">🧍🏼‍♂️Fulde navn</label>
+            <input type="text" id="full-name" name="full-name" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+          <div class="form-group">
+            <label for="phonenumber">📱 Telefonnummer</label>
+            <input type="tel" id="phonenumber" name="phonenumber" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+          <div class="form-group">
+            <label for="location-select">📍 Hvor står bilen?</label>
+            <select name="location" id="location-select" required>
+              <option value="">--Vælg en mulighed--</option>
               <option value="country">Landevej</option>
               <option value="highway">Motorvej</option>
               <option value="city">Byområde</option>
@@ -66,29 +63,25 @@
             <p class="error-message">Please enter a value</p>
           </div>
           <div class="form-group">
-            <p class="labet-text">⚠️ Hvad gik galt?</p>
-            <div class="radio-group">
-              <label for="flat-tire"><input type="radio" name="issue" value="flat-tire" required />Punktering</label>
-              <label for="engine"><input type="radio" name="issue" value="engine" />Motorproblemer</label>
-              <label for="battery"><input type="radio" name="issue" value="battery" />Dødt batteri</label>
-              <label for="lost"><input type="radio" name="issue" value="lost" />GPS vil ikke samarbejde</label>
-              <p class="error-message">Please enter a value</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="battery">📱 Hvor meget strøm har du tilbage?</label>
-            <input type="range" id="battery" name="battery" min="0" max="100" value="50" oninput="batteryValue.textContent= this.value+'%'" />
-            <output id="batteryValue">50%</output>
-            <p class="error-message">Please enter a value</p>
+            <fieldset>
+              <legend>
+                <h3>⚠️ Hvad gik galt?</h3>
+              </legend>
+
+              <label for="flat-tire"> <input type="radio" id="flat-tire" name="issue" value="flat-tire" required /> Punktering </label>
+              <label for="engine"> <input type="radio" id="engine" name="issue" value="engine" /> Motorproblemer </label>
+              <label for="battery"> <input type="radio" id="battery" name="issue" value="battery" /> Dødt batteri </label>
+              <label for="lost"> <input type="radio" id="lost" name="issue" value="lost" /> GPS vil ikke samarbejde </label>
+            </fieldset>
           </div>
           <div class="form-group">
             <label for="details">🗒️ Beskriv situationen</label>
-            <textarea name="details" id="details" rows="3"></textarea>
+            <textarea name="details" id="details" rows="3" required></textarea>
             <p class="error-message">Please enter a value</p>
           </div>
           <div class="form-group">
             <label for="terms">
-              <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
+              <input type="checkbox" id="terms" name="accept-terms" value="yes" required />
               Accepter vilkår
             </label>
           </div>
@@ -96,10 +89,18 @@
         </form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
+        <h2>Opsamling</h2>
         <article>
-          <p class="placeholder">Opsummering</p>
+          <p class="placeholder">Opsummering af formularen</p>
         </article>
+        <div>
+          <p>Fulde navn: <span id="full-name-output"></span></p>
+          <p>Telefonnummer: <span id="phonenumber-output"></span></p>
+          <p>Lokation: <span id="location-select-output"></span></p>
+          <p>Problem: <span id="issue-output"></span></p>
+          <p>Beskrivelse: <span id="detalis-output"></span></p>
+          <p>Accepter vilkår: <span id="terms-output"></span></p>
+        </div>
       </section>
     </main>
     <footer>
