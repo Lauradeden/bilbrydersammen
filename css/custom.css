@@ -8,7 +8,7 @@
   /* Logotype */
   --color-logotype-bg: #000;
   --color-text-logotype: #fffae2;
-  --font-logotype-size: 1rem;
+  --font-logotype-size: 2rem;
 
   /* Global menu */
   --color-menu-bg: #6f90eb;
@@ -46,11 +46,11 @@
   --color-cta-newscard-bg-inverted: #6f90eb;
 
   /* Fonts */
-  --font-family-sans: ui-sans-serif;
-  /* --font-weight-light: 300;
+  --font-family-sans: "Rubik", ui-sans-serif;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700; */
+  --font-weight-bold: 700;
 
   /* Text sizes */
   --logotype-size: 1rem;
