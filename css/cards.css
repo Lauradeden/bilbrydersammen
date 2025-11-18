@@ -4,7 +4,7 @@
   grid-template-columns: 3fr 5fr;
   gap: 10px;
   padding: 40px 0 40px 20px;
-  border-radius: var(--border-radius);
+  border-radius: 37px;
   height: minmax(200px, min-content);
 }
 .daily_text {
@@ -55,17 +55,18 @@
   content: "BREAKING NEWS";
   background-color: var(--color-headline-bg);
   color: var(--color-headline-text-page);
-  font-size: var(--font-h3-size);
-  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  line-height: 1rem;
+  line-height: 1.5rem;
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 0;
+  margin-top: 30px;
 }
 .news_card:first-child {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: 37px 37px 0 0;
 }
 .news_card:last-child {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: 0 0 37px 37px;
 }
 
 .news_card .cta_btn {
@@ -75,13 +76,14 @@
   display: inline-block;
   padding: 0.4rem 1rem;
   background-color: var(--color-cta-card-bg);
-  color: var(--color-text-inverted);
+  color: black;
   text-decoration: none;
   width: max-content;
-  border-radius: var(--border-radius);
+  border-radius: 37px;
 }
 .news_card .cta_btn {
   background-color: var(--color-cta-newscard-bg);
+  border: 0;
 }
 .news_card:nth-of-type(2n) .cta_btn {
   background-color: var(--color-cta-newscard-bg-inverted);
@@ -90,4 +92,73 @@
 .cta_btn:after {
   content: "\2192";
   margin-left: 1rem;
+}
+
+[popover] {
+  padding: 1rem;
+  max-height: 90vh;
+  max-width: 65ch;
+  width: 90vw;
+  margin: auto;
+  padding: 3em;
+  line-height: 1.5em;
+
+  button {
+    position: sticky;
+    top: 0;
+    justify-self: end;
+  }
+
+  &:popover-open {
+    display: grid;
+    border-radius: 37px;
+    border-color: white;
+  }
+
+  &::backdrop {
+    background: #0008;
+  }
+  img {
+    width: 100%;
+    padding: 1em;
+  }
+  h3 {
+    font-size: large;
+  }
+  time {
+    font-size: x-small;
+  }
+  .close_btn {
+    background-color: #ffa680;
+    border-radius: 50%;
+    border: 0;
+    padding: 1rem;
+    font-size: small;
+  }
+  .close_btn2 {
+    background-color: #6f90eb;
+    border-radius: 50%;
+    border: 0;
+    padding: 1rem;
+    font-size: small;
+  }
+}
+[popover],
+::backdrop {
+  opacity: 0;
+  transition: 300ms;
+}
+::backdrop {
+  transition: 300ms allow-discrete;
+}
+:popover-open,
+:popover-open::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  :popover-open,
+  :popover-open::backdrop {
+    opacity: 0;
+  }
 }
