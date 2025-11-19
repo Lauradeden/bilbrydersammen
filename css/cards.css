@@ -76,7 +76,6 @@
   display: inline-block;
   padding: 0.4rem 1rem;
   background-color: var(--color-cta-card-bg);
-  color: black;
   text-decoration: none;
   width: max-content;
   border-radius: 37px;
@@ -102,6 +101,8 @@
   margin: auto;
   padding: 3em;
   line-height: 1.5em;
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
 
   button {
     position: sticky;
@@ -112,7 +113,7 @@
   &:popover-open {
     display: grid;
     border-radius: 37px;
-    border-color: white;
+    border: none;
   }
 
   &::backdrop {
@@ -129,14 +130,14 @@
     font-size: x-small;
   }
   .close_btn {
-    background-color: #ffa680;
+    background-color: var(--color-cta-newscard-bg);
     border-radius: 50%;
     border: 0;
     padding: 1rem;
     font-size: small;
   }
   .close_btn2 {
-    background-color: #6f90eb;
+    background-color: var(--color-cta-newscard-bg-inverted);
     border-radius: 50%;
     border: 0;
     padding: 1rem;
@@ -161,4 +162,8 @@
   :popover-open::backdrop {
     opacity: 0;
   }
+}
+
+html {
+  [popover]
 }
