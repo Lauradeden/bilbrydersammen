@@ -3,14 +3,14 @@
 }
 #form-section,
 #form-summary {
-  background-color: #fff;
+  background-color: var(--color-card-bg);
   border-radius: 37px;
 }
 #form-summary h2 {
   line-height: 3rem;
   text-align: center;
-  background-color: black;
-  color: #fffae2;
+  background-color: var(--color-headline-bg);
+  color: var(--color-text-inverted);
   padding: 0;
   margin-left: -0.84rlh;
   margin-right: -0.84rlh;
@@ -73,7 +73,7 @@ label {
 }
 
 button {
-  background-color: #ff4b00;
+  background-color: var(--color-cta-card-bg);
   color: #fffae2;
   border: 0;
   border-radius: 30px;
@@ -137,8 +137,8 @@ button:active {
 
 /* Styling */
 #form-info h2 {
-  background-color: #000;
-  color: #fffae2;
+  background-color: var(--color-headline-bg);
+  color: var(--color-text-inverted);
   margin-left: -0.84rlh;
   margin-right: -0.84rlh;
   margin-top: 30px;
