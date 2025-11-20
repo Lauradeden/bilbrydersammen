@@ -5,10 +5,12 @@
 .info-text {
   background-color: var(--color-info-bg);
   padding: 20px 0;
+  border-radius: 37px;
 }
 .info-graphic {
-  border-radius: 0;
+  border-radius: 37px;
   margin: 60px auto 80px auto;
+  padding-top: 40px;
 }
 .info-text h2 {
   line-height: 3rem;
@@ -16,13 +18,14 @@
   background-color: var(--color-headline-bg);
   color: var(--color-headline-text-page);
   margin-bottom: 1rem;
+  margin-top: 20px;
 }
 .info-text h3 {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   line-height: 0.8rem;
   font-weight: 600;
   margin: 0;
-  padding: 0;
+  padding-bottom: 1em;
 }
 .info-text > *:not(:first-child) {
   margin: 0 clamp(1rem, 10%, 7rem);

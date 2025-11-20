@@ -31,7 +31,7 @@
   margin: 0 clamp(1rem, 10%, 7rem);
 }
 #form-summary p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.3;
   margin: 0 0 1.2rem 0;
   padding: 0;
@@ -44,29 +44,34 @@ input {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
+  background-color: var(--input-color-bg);
 }
 textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
+  background-color: var(--input-color-bg);
 }
 option {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
   padding: 1rlh;
+  background-color: var(--input-color-bg);
 }
 fieldset {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
   padding: 0.5rlh;
+  background-color: var(--input-color-bg);
 }
 select {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0px 1px 2px #0001;
   padding: 0.3rlh;
+  background-color: var(--input-color-bg);
 }
 label {
   font-weight: bold;
