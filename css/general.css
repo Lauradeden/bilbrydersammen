@@ -151,3 +151,7 @@ footer a {
   margin-left: 2em;
   display: inline-block;
 }
+
+#main-disclamer-content img {
+  padding-top: 1em;
+}
